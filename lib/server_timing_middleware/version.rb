@@ -1,0 +1,3 @@
+module ServerTimingMiddleware
+  VERSION = "0.0.1"
+end
