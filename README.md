@@ -6,6 +6,9 @@ This is a simple Rack Middleware that can be plugged in apps which use `ActiveSu
 
 :warning: Take into account this has not been tested in production. It might have memory leaks or slow down your application.
 
+This is how it looks in Chrome's inspector:
+![image](https://cloud.githubusercontent.com/assets/959128/24759919/4866f1ce-1ae7-11e7-832c-f8aaf3a27f78.png)
+
 ## Installation
 
 Add this line to your application's Gemfile:
