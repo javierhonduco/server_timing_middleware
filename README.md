@@ -1,5 +1,7 @@
 # ServerTimingMiddleware
 
+[![Build Status](https://travis-ci.org/javierhonduco/server_timing_middleware.svg?branch=master)](https://travis-ci.org/javierhonduco/server_timing_middleware)
+
 This is a simple Rack Middleware that can be plugged in apps which use `ActiveSupport::Notifications` such as Rails apps, to retrieve all the events and send them as a header so they can be seen in Server Timing compliant clients, such as Chrome's `Network > Timing`.
 
 :warning: Take into account this has not been tested in production. It might have memory leaks or slow down your application.
