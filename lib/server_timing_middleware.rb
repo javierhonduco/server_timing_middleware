@@ -39,9 +39,9 @@ module Rack
       }
 
       # Example output:
-      #   'cpu=0.009; "CPU", mysql=0.005; "MySQL", filesystem=0.006; "Filesystem"'
+      #   'cpu;dur=0.009;desc="CPU", mysql;dur=0.005;desc="MySQL", filesystem;dur=0.006;desc="Filesystem"'
       headers['Server-Timing'] = mapped_events.map do |name, elapsed_time|
-        "#{name}=#{elapsed_time}; \"#{name}\""
+        "#{name};dur=#{elapsed_time};desc=\"#{name}\""
       end.join(', ')
 
       [status, headers, body]
