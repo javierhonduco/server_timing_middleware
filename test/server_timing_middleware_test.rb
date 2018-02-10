@@ -20,8 +20,6 @@ class ServerTimingMiddlewareTest < Minitest::Test
     status, headers, body = Rack::ServerTimingMiddleware.new(SimpleMockedRack.new).call(nil)
     server_timing = headers['Server-Timing']
 
-    assert_match /omg/, server_timing
-    assert_match /lol/, server_timing
-    assert_match /kawaii/, server_timing
+    assert_match /omg;dur=.+;desc="omg", lol;dur=.+;desc="lol", kawaii;dur=.+;desc="kawaii"/, server_timing
   end
 end
