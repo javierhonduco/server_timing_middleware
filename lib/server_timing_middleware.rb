@@ -42,7 +42,7 @@ module Rack
       #   'cpu;dur=0.009;desc="CPU", mysql;dur=0.005;desc="MySQL", filesystem;dur=0.006;desc="Filesystem"'
       headers['Server-Timing'] = mapped_events.map do |name, elapsed_time|
         "#{name};dur=#{elapsed_time};desc=\"#{name}\""
-      end.join(', ')
+      end.join(',')
 
       [status, headers, body]
     end
